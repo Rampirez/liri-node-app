@@ -5,3 +5,6 @@ This app is made to look up spotify info on a song you look up. It returns it's 
 HOW TO OPERATE:
 1. Begin in bash and type 'node liri.js spotify-this-song <your song here>
 2. Thats it!
+
+![1st pic](/images/Capture.JPG)
+![2nd pic](/images/Capture2.JPG)
