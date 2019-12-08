@@ -20,7 +20,10 @@ if (command == "spotify-this-song") {
       )
       .then(function(data) {
         //console.log(JSON.stringify(data, null, 2));
-        console.log(data.tracks.items[0].artists[0].name);
+        console.log("Artist: " + data.tracks.items[0].artists[0].name);
+        console.log("Track Name: " + data.tracks.items[0].name);
+        console.log("Preview URL: " + data.tracks.items[0].preview_url);
+        console.log("Album: " + data.tracks.items[0].album.name);
       })
       .catch(function(err) {
         console.error("Error occurred: " + err);
@@ -32,10 +35,14 @@ if (command == "spotify-this-song") {
       .request(
         "https://api.spotify.com/v1/search?query=" +
           "The+Sign" +
-          "&type=track&offset=0&limit=20"
+          "&type=track&offset=0&limit=1"
       )
       .then(function(data) {
-        console.log(data);
+        //console.log(JSON.stringify(data, null, 2));
+        console.log("Artist: " + data.tracks.items[0].artists[0].name);
+        console.log("Track Name: " + data.tracks.items[0].name);
+        console.log("Preview URL: " + data.tracks.items[0].preview_url);
+        console.log("Album: " + data.tracks.items[0].album.name);
       })
       .catch(function(err) {
         console.error("Error occurred: " + err);
